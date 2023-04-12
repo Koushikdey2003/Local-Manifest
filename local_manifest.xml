@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<!-- Remotes -->
+   		<remote name="koushik"
+			fetch="https://github.com/Koushikdey2003" />
+
+		<remote name="koushik-alt"
+			fetch="https://github.com/Koushikdey2003-Alt" />
+
+
+	<!-- Device Source -->
+    	<project path="device/realme/RMX2020" name="device_realme_RMX2020" remote="koushik" revision="13.0" clone-depth="1" />
+    	<project path="vendor/realme/RMX2020" name="vendor_realme_RMX2020" remote="koushik" revision="tiramisu" clone-depth="1" />
+		<project path="kernel/realme/RMX2020" name="ArrowOS-Devices/android_kernel_realme_RMX2020" remote="github" revision="arrow-13.1" clone-depth="1" />
+
+
+	<!-- IMS -->
+		<project path="vendor/realme/RMX2020-ims" name="vendor_realme_RMX2020-ims" remote="koushik" revision="13.0" clone-depth="1" />
+
+
+	<!-- Sepolicy -->
+		<project path="device/mediatek/sepolicy_vndr" name="ArrowOS/android_device_mediatek_sepolicy_vndr" remote="github" revision="arrow-13.1" clone-depth="1" />
+
+
+	<!-- Clang -->
+		<project path="prebuilts/clang/host/linux-x86/clang-r437112" name="android_prebuilts_clang_host_linux-x86_clang-r437112" remote="koushik" revision="main" clone-depth="1" />
+
+
+	<!-- Add 4G+ toggle -->
+		<remove-project name="crdroidandroid/android_packages_apps_Settings" />
+		<project path="packages/apps/Settings" name="CrDroid-android_packages_apps_Settings" remote="koushik-alt" revision="13.0" clone-depth="1" />
+
+
+	<!-- Patches (IMS, BT) -->
+		<remove-project name="crdroidandroid/android_frameworks_base" />
+		<remove-project name="crdroidandroid/android_frameworks_av" />
+		<remove-project name="crdroidandroid/android_frameworks_native" />
+		<remove-project name="crdroidandroid/android_packages_modules_Wifi" />
+		<remove-project name="crdroidandroid/android_vendor_crdroid" />
+
+		<project path="frameworks/base" name="CrDroid-android_frameworks_base" remote="koushik-alt" revision="13.0" clone-depth="1" />
+		<project path="frameworks/av" name="CrDroid-android_frameworks_av" remote="koushik-alt" revision="13.0" clone-depth="1" />
+		<project path="frameworks/native" name="CrDroid-android_frameworks_native" remote="koushik-alt" revision="13.0" clone-depth="1" />
+		<project path="packages/modules/Wifi" name="CrDroid-android_packages_modules_Wifi" remote="koushik-alt" revision="13.0" clone-depth="1" />
+		<project path="vendor/lineage" name="crDroid-android_vendor_crdroid" remote="koushik-alt" revision="13.0" clone-depth="1" />
+
+
+</manifest>
